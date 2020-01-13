@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="main.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div id="crezione">
+                    <input id="new-todo-text" type="text" value="" placeholder="Inserisci il testo">
+                    <button id="new-todo-button">Inserisci</button>
+
+                </div>
+                <ul id="todo-list">
+
+
+                </ul>
+            </div>
+        </main>
+
+        <script id="todo-template" type="text/x-handlebars-template">
+            <li data-todo_id="{{todo_id}}">
+                <i class="fas fa-trash-alt delete-todo"></i>
+                <i class="fas fa-pencil-alt edit-todo"></i>
+                <i class="fas fa-save save-todo"></i>
+                <span class="todo-text">{{todo_text}}</span>
+                <input class="edit-todo-input" type="text"  value="{{todo_text}}">
+            </li>
+        </script>
+    </body>
+</html>
